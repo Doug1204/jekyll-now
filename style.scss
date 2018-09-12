@@ -75,20 +75,20 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 27px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 25px;
   color: #000000;
 }
 
 p {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 #example1 {
@@ -185,7 +185,7 @@ img {
 
 .date {
   font-style: italic;
-  color: #1bf931;
+  color: #FFFFFF;
 }
 
 th, td {
@@ -289,7 +289,7 @@ th {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: #1bf931;
+  color: #FFFFFF;
   font-size: 16px;
 
   @include mobile {
@@ -330,7 +330,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid #1bf931;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .posts > .post:last-child {
@@ -343,7 +343,7 @@ nav {
     margin: 1.8em .8em;
     border-left: 2px solid #1bf931;
     padding: 0.1em 1em;
-    color: #1bf931;
+    color: #FFFFFF;
     font-size: 22px;
     font-style: italic;
   }
