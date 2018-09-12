@@ -1,6 +1,7 @@
 ---
 ---
 
+
 //
 // IMPORTS
 //
@@ -18,9 +19,14 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+	background-image: url(https://images8.alphacoders.com/445/445143.jpg);
+	background-attachment: fixed;
+  font: 18px/1.4 #1bf931;
+  color: #1bf931;
+}
+
+table, th, td {
+   border: 1px solid black;
 }
 
 .container {
@@ -28,11 +34,12 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+background: rgba(1, 18, 249, 0.8);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: #1bf931;
   font-weight: bold;
 
   line-height: 1.7;
@@ -42,6 +49,22 @@ h1, h2, h3, h4, h5, h6 {
   @include mobile {
     line-height: 1.4;
   }
+}
+
+#example1 {
+    box-shadow: 5px 10px;
+}
+
+#example2 {
+    box-shadow: 5px 10px #888888;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
 }
 
 h1 {
@@ -61,19 +84,27 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: #000000;
 }
 
 p {
   margin: 15px 0;
 }
 
+#example1 {
+    box-shadow: 10px 10px 8px #888888;
+}
+
+table {
+    border: 1px solid black;
+}
+
 a {
-  color: $blue;
+  color: #ff0000;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: #1bf931;
   }
 }
 
@@ -84,6 +115,22 @@ ul, ol {
 
 ul {
   list-style-type: disc;
+}
+
+#example1 {
+    box-shadow: 10px 10px 8px 10px #888888;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+#example1 {
+    box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
 }
 
 ol {
@@ -98,12 +145,33 @@ ul ul, ol ul {
   list-style-type: circle;
 }
 
+th {
+    text-align: left;
+}
+
+#example1 {
+    box-shadow: 5px 10px inset;
+}
+
+div.polaroid {
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
 em, i {
   font-style: italic;
 }
 
 strong, b {
   font-weight: bold;
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
 }
 
 img {
@@ -117,17 +185,26 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: #1bf931;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: #1bf931;
+  background: #ff0000;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: #1bf931;
+  background: #1bf931;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -138,9 +215,13 @@ img {
     display: table;
 }
 
+tr:hover {background-color: #ff0000}
+
 .clearfix:after {
     clear: both;
 }
+
+tr:nth-child(even) {background-color: #ff0000}
 
 /*********************/
 /* LAYOUT / SECTIONS */
@@ -154,9 +235,14 @@ img {
   margin-bottom: 50px;
 }
 
+th {
+    background-color: #ff0000;
+    color: white;
+}
+
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #ff0000;
 
   @include mobile {
     text-align: center;
@@ -174,11 +260,12 @@ img {
     display: block;
     margin: 0 auto;
   }
-
-  img {
+	
+	  img {
     border-radius: 5px;
   }
 }
+
 
 .site-info {
   float: left;
@@ -192,7 +279,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: #1bf931;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -202,7 +289,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: #1bf931;
   font-size: 16px;
 
   @include mobile {
@@ -225,14 +312,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #1bf931;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: #ff0000;
     }
   }
 }
@@ -243,7 +330,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #1bf931;
 }
 
 .posts > .post:last-child {
@@ -254,9 +341,9 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid #1bf931;
     padding: 0.1em 1em;
-    color: $gray;
+    color: #1bf931;
     font-size: 22px;
     font-style: italic;
   }
@@ -275,7 +362,7 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: #ff0000;
 }
 
 footer {
@@ -287,3 +374,5 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
